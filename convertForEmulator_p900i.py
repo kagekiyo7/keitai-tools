@@ -44,7 +44,7 @@ def main(start_spsize, start_jam):
                     sp_content = file.read()
             else:
                 sp_content = bytes()
-                print(f"No SP file found for {adf_file_path}, continuing anyway...")
+                print(f"WARM: No SP file found for {adf_file_path}")
 
             new_adf_content, new_sp_content, jar_name = convert(adf_content, jar_content, sp_content, start_spsize, start_jam)
 
@@ -84,7 +84,10 @@ def convert(adf_content, jar_content, sp_content, start_spsize, start_jam):
         jam_str += f"{key} = {value}\n"
 
     jam_str += f"AppSize = {len(jar_content)}\n"
-    if len(sp_sizes): jam_str += f"SPsize = {','.join(map(str, sp_sizes))}\n"
+    if len(sp_sizes):
+        jam_str += f"SPsize = {','.join(map(str, sp_sizes))}\n"
+    else:
+        print("WARM: SPsize is 0.") ;
     jam_str += f"UseNetwork = http\n"
     jam_str += f"UseBrowser = launch\n"
 
