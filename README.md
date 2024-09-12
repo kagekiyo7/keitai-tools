@@ -5,9 +5,9 @@
 - mexaedit.py - For softbank phone .jad files, changes the .jad file to be imported in the MEXA.
 - convertForEmulator_*.py - Convert the selected ADF/JAR/SP raw folder for the emulator.
   - p900i: for p900i, p900iV, n900i, n900is.
-  - p901is: for p901is.
+  - p901is: for p901is, n901is.
   - n904i: for n904i.
-  - n700i: for n700i, n701i.
+  - n700i: for n700i, n701i, n702id.
 - convertForSH.py - Convert the APL/SCP raw folder for the emulator.
 - carvecramfs.py - courtesy of @xyzz, carves cramfs images from a given file.
 - strip*.py - Strips * bytes from a given file from the top, used to make files from DFE folder readable.
